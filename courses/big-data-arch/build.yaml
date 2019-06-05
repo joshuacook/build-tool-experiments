@@ -1,0 +1,37 @@
+course_info:
+  name: minimal-example
+  version: 1.0.0
+  type: ILT
+
+bdc_min_version: "1.24"
+master_parse_min_version: "1.18"
+top_dbc_folder_name: $course_id
+src_base: ../../modules
+
+notebook_defaults:
+  dest: $target_lang/$notebook_type/$basename.$target_extension
+  master:
+    enabled: true
+    scala: false
+    python: true
+    answers: true
+    instructor: false
+    enable_templates: false
+    heading:
+      enabled: false
+    footer:
+      enabled: false
+
+misc_files:
+  - src: CHANGELOG.md
+    dest: ""
+
+notebooks:
+  - src: big-data-arch/Big-Data-Arch-1.py
+    dest: $target_lang/$notebook_type/$basename.$target_extension
+  - src: big-data-arch/Big-Data-Arch-2.py
+    dest: $target_lang/$notebook_type/$basename.$target_extension
+  - src: big-data-arch/Big-Data-Arch-3.py
+    dest: $target_lang/$notebook_type/$basename.$target_extension
+  - src: ../courses/big-data-arch/bdsetup.py
+    dest: $target_lang/$notebook_type/includes/$basename.$target_extension
